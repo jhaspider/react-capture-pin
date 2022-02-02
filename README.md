@@ -15,3 +15,11 @@ Not using input boxes makes thing much easier. Here are the issues that I faced 
 - Too many scenario handling resulting in much larger & complex code than this.
 
 ![Capture PIN](https://github.com/jhaspider/react-capture-pin/blob/main/public/capture_pin.png)
+
+## Customise to support text
+
+Change below line in `capture_input.js` to following regular expression :
+
+```sh
+const only_alpha_pattern = /[0-9]/g;
+```

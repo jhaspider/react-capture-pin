@@ -25,7 +25,7 @@ const CaptureInput = () => {
       }
     } else {
       if (e.key.length === 1) {
-        let only_alpha_pattern = /[0-9]/g; // Allowing only number to be captured
+        const only_alpha_pattern = /[0-9]/g; // Allowing only number to be captured
         let valid_char = only_alpha_pattern.test(e.key);
         console.log(`Char : ${e.key} is ${valid_char}`);
         if (valid_char) if (newWord.length < LENGTH) newWord.push(e.key);
