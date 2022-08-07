@@ -4,13 +4,10 @@ const LENGTH = 5;
 
 const CaptureInput = () => {
   const [newWord, setNewWord] = useState([]);
-  const [test, setTest] = useState("");
 
   useEffect(() => {
     document.addEventListener("keyup", onKeyUp);
-    return () => {
-      document.removeEventListener("keyup", onKeyUp);
-    };
+    return () => document.removeEventListener("keyup", onKeyUp);
   }, []);
 
   const onKeyUp = (e) => {
@@ -19,7 +16,6 @@ const CaptureInput = () => {
         newWord.splice(newWord.length - 1, 1);
       }
     } else if (e.keyCode === 13) {
-      console.log(newWord, test);
       if (LENGTH === newWord.length) {
         alert(newWord.join(""));
       } else {
@@ -30,10 +26,8 @@ const CaptureInput = () => {
         console.log(e.key);
         const only_alpha_pattern = /[0-9]/g; // Allowing only number to be captured
         let valid_char = only_alpha_pattern.test(e.key);
-        console.log(`Char : ${e.key} is ${valid_char}`);
         if (valid_char) {
           if (newWord.length < LENGTH) newWord.push(e.key);
-          setTest((prevTest) => prevTest + "" + e.key);
         }
       }
     }
@@ -42,7 +36,7 @@ const CaptureInput = () => {
 
   return (
     <>
-      <h2>EG. Enter PIN</h2>
+      <h2>Eg. Enter PIN</h2>
       <div className="pins">
         {newWord.map((char, ind) => {
           return (
