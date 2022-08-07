@@ -1,0 +1,76 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+  gap: 5px;
+  align-self: center;
+  padding: 2rem;
+}
+.pins {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.box {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+.big {
+  border-radius: 8px;
+  border: 0.01em solid #364f6b;
+  width: 1.75em;
+  height: 1.75em;
+  font-size: 1.5em;
+}
+
+.blinking-cursor {
+  font-size: 26px;
+  color: #515a60;
+  animation: 1.5s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #515a60;
+  }
+}
