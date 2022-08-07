@@ -23,7 +23,6 @@ const CaptureInput = () => {
       }
     } else {
       if (e.key.length === 1) {
-        console.log(e.key);
         const only_alpha_pattern = /[0-9]/g; // Allowing only number to be captured
         let valid_char = only_alpha_pattern.test(e.key);
         if (valid_char) {
