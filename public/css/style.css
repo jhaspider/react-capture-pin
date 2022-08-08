@@ -8,23 +8,6 @@ body {
   font-size: 16px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 40%;
-  gap: 5px;
-  align-self: center;
-  padding: 2rem;
-}
-.pins {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
-
 h1 {
   font-size: 1.5rem;
 }
@@ -40,6 +23,24 @@ p {
   margin-top: 0rem;
   margin-bottom: 0;
   padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+  gap: 5px;
+  align-self: center;
+  padding: 2rem;
+}
+
+.pins {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 1rem;
 }
 
 .box {
